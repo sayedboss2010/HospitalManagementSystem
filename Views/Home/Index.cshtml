@@ -1,0 +1,1 @@
+<h2 class="mb-4">لوحة التحكم</h2><div class="row g-3">@foreach(var c in new[]{("المرضى",ViewBag.Patients),("الأطباء",ViewBag.Doctors),("العيادات",ViewBag.Clinics),("الخدمات",ViewBag.Services)}){<div class="col-md-3"><div class="card shadow-sm"><div class="card-body"><h6>@c.Item1</h6><div class="display-6">@c.Item2</div></div></div></div>}</div>

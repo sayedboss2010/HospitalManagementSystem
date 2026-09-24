@@ -1,0 +1,2 @@
+using Hospital.Web.Data; using Microsoft.AspNetCore.Mvc; using Microsoft.EntityFrameworkCore;
+namespace Hospital.Web.Controllers; public class HomeController(AppDbContext db):Controller { public async Task<IActionResult> Index(){ViewBag.Patients=await db.Patients.CountAsync();ViewBag.Doctors=await db.Doctors.CountAsync();ViewBag.Clinics=await db.Clinics.CountAsync();ViewBag.Services=await db.MedicalServices.CountAsync();return View();}}
